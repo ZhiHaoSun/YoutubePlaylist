@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
+
+<head>
+    <title>Youtube Playlist Library</title>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+
+    <script type="text/javascript" src="scripts/jquery-1.9.1.js" charset="utf-8"></script>
+
+
+    <script type="text/javascript" src="scripts/youtube.js"></script>
+
+
+    <script src="scripts/Parse.js"></script>
+
+    <script src="scripts/login.js"></script>
+
+    <script type="text/javascript" src="scripts/index.js">
+    </script>
+
+</head>
+
+<body>
+
+
+
+<div class="wrap">
+
+
+
+
+
+</div>
+<!--wrap-->
+
+<div class="side-bar">
+
+    <h2>Design</h2>
+
+    <div class="btn-box">
+
+        <span class="btn" onclick="grid();">Grid</span>
+        <span class="btn" onclick="stack();">Stack</span>
+        <span class="btn" onclick="shuffle();">Shuffle</span>
+        <span class="btn" onclick="shuffle_r();">R-Shuffle</span>
+
+        <span class="btn" onclick="logout();">Log-out</span>
+
+    </div>
+    <!--btn-bar-->
+
+    <h3 style="color:white">Change Playlist</h3>
+    <select class="list-group" id="preference"><option value=""></option></select>
+
+</div>
+<!--side-bar-->
+
+<span class="h-btn" id="s_toggle">Hide</span>
+
+
+
+<div class="modal " id="positionDetails" role="dialog" aria-labelledby="positionDetailsLabel" aria-hidden="true" style="display:">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-footer" style="height:10px;">
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="$('.modal').fadeOut()" style="background:#609;color:#fff">close</button>
+
+            </div>
+            <div class="modal-header">
+
+                <h4 class="modal-title" id="title">  </h4>
+            </div>
+
+            <div class="modal-body">
+
+
+                <div class="row">
+
+                    <div class="col-md-12 list-details" style="border:2px solid #666;box-shadow:0px 0px 2px #333;">
+                        <div class="row">
+
+                            <div class="col-md-8 video" style="float:left">
+                                <div id="playerContainer" class="container" style="left:0;margin:0;margin-left:-10px !important;padding:10px;">
+                                    <object type="application/x-shockwave-flash" data="" width="525" height="350" id="player" style="visibility: visible;">
+                                        <param name="allowfullscreen" value="true">
+                                    </object>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <br>
+
+                        <div class="row">
+
+                            <div class="col-md-12 "> Description:</div>
+                            <div class="col-md-12 desc">
+                                <p></p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="$('.modal').fadeOut()" style="background:#609;color:#fff">Close</button>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:fb="">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Youtube Playlist Library</title>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+
+    <script type="text/javascript" src="scripts/jquery-1.9.1.js" charset="utf-8"></script>
+
+    <script src="scripts/Parse.js"></script>
+    <script src="scripts/login.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+            $("#RegisterPage").click(function(){
+
+
+                Register($("#RegisterUsername").val(),$("#RegisterPassword").val());
+
+
+            }) ;
+
+            $("#LoginPage").click(function(){
+                Login($("#LoginUsername").val(),$("#LoginPassword").val());
+
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+
+    <div class="modal " id="positionDetails" role="dialog" aria-labelledby="positionDetailsLabel" style="display:block">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+
+                <div class="modal-header">
+
+                    <h4 class="modal-title" id="title">Welcome to the Youtube Playlist Library!</h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col-md-12 list-details" style="border:2px solid #666;box-shadow:0px 0px 2px #333;">
+                            <div class="login">
+                                <div class="row">
+                                    <h3>Log in: </h3>
+                                    <label for="LoginUsername">Username:</label>
+                                    <input type="text" id="LoginUsername" placeholder="sun">
+                                    <label for="LoginPassword">Password: </label>
+                                    <input type="password" id="LoginPassword" placeholder="123">
+                                    <button id="LoginPage">Submit</button>
+                                </div>
+
+                                <div class="row">
+                                    <h3>Register: </h3>
+                                    <label for="RegisterUsername">Username:</label>
+                                    <input type="text" id="RegisterUsername">
+                                    <label for="RegisterPassword">Password: </label>
+                                    <input type="password" id="RegisterPassword">
+                                    <button id="RegisterPage">Submit</button>
+
+                                </div>
+
+                                <div class="row">
+
+                                    <p id="RegisterSuccess"></p>
+
+                                </div>
+                            </div>
+                            <div style="display: none;" class="ChoosePlaylist">
+                                <div class="row">
+                                    <select id="Playlists"></select>
+                                    <button id="proceed">Proceed</button>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <h2>Add a new Playlist</h2>
+                                    <label for="newListTitle">Give a name to your new playlist</label>
+                                    <input type="text" id="newListTitle">
+                                    <label for="newListCode">Give the code of the Youtube PlayList</label>
+                                    <label for="newListCode">(Example: https://www.youtube.com/playlist?list=PLFJifqT2CnZUvX3VRu66wqCNq8WLzlfE1,  You can put in the PLFJifqT2CnZUvX3VRu66wqCNq8WLzlfE1)</label>
+                                    <input type="text" id="newListCode">
+                                    <button onclick="addPlaylist()">Add PlayList</button>
+                                    <p></p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
